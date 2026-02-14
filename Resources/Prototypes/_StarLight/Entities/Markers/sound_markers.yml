@@ -1,0 +1,88 @@
+## https://github.com/RMC-14/RMC-14/pull/6807/ // https://github.com/RMC-14/RMC-14/pull/8753/
+
+## Base
+
+#Basic
+- type: entity
+  parent: MarkerBase
+  id: MarkerSoundBase
+  abstract: true
+  name: sound marker
+  components:
+  - type: Sprite
+    sprite: _Starlight/Markers/sound_marker.rsi
+    layers:
+    - state: sound_marker
+      map: ["enum.GhostVisibleOnlyVisualLayers.Base"]
+  - type: VisibleToGhostsOnly
+  - type: Appearance
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Tag
+    tags:
+    - ForceFixRotations
+    - HideContextMenu
+
+#Ambient Loop
+- type: entity
+  parent: MarkerSoundBase
+  id: MarkerSoundAmbientBase
+  abstract: true
+  name: ambient sound marker
+  components:
+  - type: AmbientSound
+    enabled: true
+    volume: 10
+    range: 50
+  - type: Sprite
+    state: ambient
+
+#Single No Loop
+- type: entity
+  parent: MarkerSoundBase
+  id: MarkerSoundSingleBase
+  abstract: true
+  name: non-loop sound marker
+  components:
+  - type: EmitSoundOnSpawn
+  
+## Sound Markers
+
+# - type: entity
+  # parent: MarkerSoundAmbientBase
+  # id: MarkerSound
+  # suffix: 
+  # components:
+  # - type: AmbientSound
+    # sound:
+      # collection: 
+
+
+# - type: entity
+  # parent: MarkerSoundSingleBase
+  # id: MarkerSound
+  # suffix: 
+  # components:
+  # - type: EmitSoundOnSpawn
+    # sound:
+      # collection: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
