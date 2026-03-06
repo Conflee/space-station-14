@@ -143,9 +143,9 @@
         ignoreResistances: true
         damage:
           groups:
-            Burn: -20
-            Toxin: -50
-            Brute: -20
+            Burn: -10 #SL -20 > -10
+            Toxin: -20 #SL -50 > -20
+            Brute: -10 #SL -20 > -10
 
       - !type:PopupMessage
         conditions:
@@ -221,8 +221,8 @@
           reagent: Nitrium
           min: 1
           max: 8
-        walkSpeedModifier: 1.25
-        sprintSpeedModifier: 1.25
+        walkSpeedModifier: 1.15 #SL Edit 1.25 > 1.15
+        sprintSpeedModifier: 1.15 #SL Edit 1.25 > 1.15
 
       - !type:NitriumMovementSpeedModifier
         conditions:
@@ -230,16 +230,16 @@
           reagent: Nitrium
           min: 8
           max: 12
-        walkSpeedModifier: 1.4
-        sprintSpeedModifier: 1.4
+        walkSpeedModifier: 1.3 #SL Edit 1.4 > 1.3
+        sprintSpeedModifier: 1.3 #SL Edit 1.4 > 1.3
 
       - !type:NitriumMovementSpeedModifier
         conditions:
         - !type:ReagentCondition
           reagent: Nitrium
           min: 12
-        walkSpeedModifier: 1.6
-        sprintSpeedModifier: 1.6
+        walkSpeedModifier: 1.4 #SL Edit 1.6 > 1.4
+        sprintSpeedModifier: 1.4 #SL Edit 1.6 > 1.4
 
       - !type:AddReagentToBloodstream
         conditions:
